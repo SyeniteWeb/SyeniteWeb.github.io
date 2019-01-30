@@ -35,26 +35,56 @@ transition: 0.6s;
 .topnav .icon {
   display: none;
 }
-.threebars {
+
+.onebar {
+/*
 padding-top: 27px;
 float: right;
 padding-left: 15px;
 float: right;
 padding-bottom: 10px;
+*/
 }
+
 .twobars {
+/*
+padding-top: 27px;
+float: right;
+padding-left: 15px;
+float: right;*/
+}
+
+threebars {
+/*
 padding-top: 27px;
 float: right;
 padding-left: 15px;
 float: right;
+padding-right: 15px;*/
 }
-.onebar {
-padding-top: 27px;
-float: right;
-padding-left: 15px;
-float: right;
-padding-right: 15px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+  padding-top: 12px;
+  /*background-color: #333;*/
 }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  /*color: white;*/
+  text-align: center;
+  padding: 14px 6px;
+  text-decoration: none;
+}
+
 .logo {
 font-size: 25px;
 padding-left: 15px;
@@ -138,6 +168,7 @@ background-color: LightSteelBlue;
 height: 320px;
 overflow: auto;
 }
+
 .fifthtext {
 text-align: center;
 font-family: 'Oxygen', sans-serif;
@@ -152,6 +183,7 @@ padding-top: 30px;
 font-size: 16px;
 overflow: auto;
 line-height: 1.5;
+padding-left: 20px;
 }
 .sixthtext:hover {
 /*text-align: center;*/
@@ -187,15 +219,41 @@ transition: .5s;
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child){display: none;}
- 
+   .topnav .icon {
+   float: right;
+    display: block;
+    position: absolute;
+    right: 0;
+    }
+    
+    .nav a {
+    display: none;
+    }
+    
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+    
   .topnav a.icon {
     float: right;
     display: block;
-    padding: 20px;
+    padding: 10px;
     }
-  .onebar {
-  padding-top: 7px; 
-  }
   
 }
 @media screen and (max-width: 600px) {
@@ -246,6 +304,10 @@ overflow: auto;
 line-height: 1.5;
 transition: 2s;
 }
+
+.fa fa-bars{
+/*float:right;*/
+}
 .fa {
   padding: 10px;
   font-size: 15px;
@@ -288,10 +350,13 @@ color: white;
 
 <a href="index.html" class="logo">Syenite</a>
 
-<a href="contact.html" class="onebar" id="myonebar">| Contact |</a>
-<a href="webdesign.html" class="twobars" id="mytwobars">| Web Design |</a>
-<a href="about.html" class="threebars" id="mythreebars">| About |</a>
-
+<ul>
+<div class="nav">
+<li><a href="about.html" class="onebar" id="mythreebars">| About |</a></li>
+<li><a href="webdesign.html" class="twobars" id="mytwobars">| Web Design |</a></li>
+<li style="padding-right: 12px;"><a href="contact.html" class="threebars" id="myonebar">| Contact |</a></li>
+</div>
+</ul>
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 <i class="fa fa-bars"></i>
 </a>
@@ -303,11 +368,11 @@ color: white;
 </div>
 <div class="secondblock"><div class="thirdtext"><p><strong>Top Quality Web Design</strong></p></div><div class="firstimage"><img src="https://www.goodfreephotos.com/albums/vector-images/green-diamond-vector-clipart.png" alt="diamond" style="height:90px;width:60px;"class="center"></div><div class="fourthtext"><p>Syenite web services will guarantee you only the best service for you. If you are unsatisfied with your website, you can get your money back.</p></div></div>
 <div class="thirdblock"><div class="fifthtext"><p><strong>Services Offered</strong></p></div><div class="sixthtext">
-<ul>
-<li>Custom Website Design</li>
-<li>Responsive Web Design</li>
-<li>SEO (Search Engine Optimization)</li>
-</ul>
+
+<p>~Custom Website Design</p>
+<p>~Responsive Web Design</p>
+<p>~SEO (Search Engine Optimization)</p>
+
 </div></div>
 <div class="fourthblock"><div class="seventhtext"><p><strong>Contact</strong></p></div><div class="eighthtext"><p>Contact Syenite Web Services at syenitewebservices@gmail.com or fill out our contact form.</p></div></div>
 <div class="footer">
@@ -336,3 +401,4 @@ function myFunction() {
 
 </body>
 </html>
+
