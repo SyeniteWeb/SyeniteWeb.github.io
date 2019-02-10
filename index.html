@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,6 +101,12 @@ background-repeat: no-repeat;
 background-size: cover;
 height: 450px;
 overflow: auto;
+ -webkit-animation-name: colors; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: colors;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 .firsttext{
 color: white;
@@ -344,6 +351,22 @@ line-height: 1.5;
 text-align: center;
 color: white;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes colors {
+  0%   {background-color:blue;}
+  33%  {background-color:BlueViolet;}
+  66%  {background-color:DarkBlue;}
+  100% {background-color:blue;}
+}
+
+/* Standard syntax */
+@keyframes colors {
+  0%   {background-color:blue;}
+  33%  {background-color:BlueViolet;}
+  66%  {background-color:DarkBlue;}
+  100% {background-color:blue;}
+}
 </style>
 </head>
 <body>
@@ -403,4 +426,3 @@ function myFunction() {
 
 </body>
 </html>
-
